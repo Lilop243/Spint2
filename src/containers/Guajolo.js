@@ -15,10 +15,12 @@ function Guajolo () {
        <div>
        { !todos ? 'cargando...':
        todos.map((todo,index)=>{
-         return <div className="tab-pane fade show active" id="Guappjolotas" role="tabpanel" aria-labelledby="pills-home-tab">{todo.imagen}</div>
+         return <div className="tab-pane fade show active" id="Guappjolotas" role="tabpanel" aria-labelledby="pills-home-tab">
+         <img src="{todo.imagen}" alt=""/>
+         </div>
 
        })
-                
+
        }
      </div>
    )    
