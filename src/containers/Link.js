@@ -1,26 +1,26 @@
-import { button } from 'bootstrap';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom'
 
-const Link =  () => { 
+const Links =  () => { 
   return <div>
   <Header className=" ">
     <ul className="nav nav-pills nav-fill">
    
   <li className="nav-item" role="presentation">
-    <Button style={{margin:'10px'}} className="active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#Guappjolotas" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Guappjolotas</Button>
+  <Link to="/Guajolo" > Guajolotas </Link>
   </li>
   <li className="nav-item" role="presentation">
-    <Button style={{margin:'10px'}} className=""  id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#Bebidas" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Bebidas</Button>
+  <Link to="/bebidas" > Bebidas </Link>
   </li> 
   <li className="nav-item" role="presentation">
-    <Button style={{margin:'10px'}} className="" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#Tamales" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Tamales</Button>
+  <Link to="/tamales" > Tamales </Link>
   </li>
 
     </ul>
   
   </Header>
   <Div className="tab-content" id="pills-tabContent">
-    <div className="tab-pane fade show active" id="Guappjolotas" role="tabpanel" aria-labelledby="pills-home-tab"><a href="./Nada"><Img src="./card...svg" alt=""/></a></div>
+    <div className="tab-pane fade show active" id="Guappjolotas" role="tabpanel" aria-labelledby="pills-home-tab"></div>
     <div className="tab-pane fade" id="Bebidas" role="tabpanel" aria-labelledby="pills-profile-tab"><Img src="./bebidas.svg" alt=""/></div>
     <div className="tab-pane fade" id="Tamales" role="tabpanel" aria-labelledby="pills-contact-tab"><Img src="./tamales.svg" alt=""/></div>
   </Div>
@@ -65,4 +65,4 @@ const Img = styled.img`
 `
 
 
-export default Link;
+export default Links;
