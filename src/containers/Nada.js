@@ -1,6 +1,5 @@
 // import React, { useState, useEffect } from 'react';
 // import { Atras, Bebida, BotonAgregar, BotonesCont, Cantidad, Check, Cont, ContAdicion, Contador, ContProduct, ContSabores, Descrip, ItemBebidas, Navb, NombreBe, NombreProd, PrecioBe, PrecioProd, Product, Sabores, SegSubtitulo, Subtitulo } from '../styles/StyledSeleccion';
-// import {} from '../helpers/Url';
 
 // const Nada = () => {
 //     const productos = JSON.parse(localStorage.getItem('productCar')) || []
@@ -11,15 +10,9 @@
 //     const [sabor, setsabor] = useState([]);
 
 //     const consultBebi = async () => {
-//         const resp = await fetch(urlBebidas)
+//         const resp = await fetch()
 //         const data = await resp.json()
 //         setbebidas(data)
-//     }
-
-//     const consultSabo = async () => {
-//         const resp = await fetch(urlSabores)
-//         const data = await resp.json()
-//         setsabor(data)
 //     }
 
 //     const consultSabo = async () => {
@@ -33,10 +26,6 @@
 //         consultSabo()
 //     }, []);
 
-//     useEffect(() => {
-//         consultBebi()
-//         consultSabo()
-//     }, []);
 
 //     const mas = () => {
 //         setcantidad(cantidad + 1)
