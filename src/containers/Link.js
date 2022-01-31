@@ -27,23 +27,6 @@ const Links =  () => {
 </div>;
 };
 
-// const Button = styled.button`
-//     font-size:20px;
-//     border:none;
-//     background-color:#F7EEFE;
-    
-//     &:hover{
-//       color:orange;
-//     }
-//   &:focus {
-//     color: red;
-//   }
-//   &:active {
-//     color: yellow;
-//   }
-   
-
-// `
 
 const Header = styled.div`
 margin-top:52px;
