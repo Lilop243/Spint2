@@ -72,10 +72,10 @@ outline: none;
   border: 0;
 `
 
-const Img = styled.img`
-   display: flex;
-    margin:auto;
-`
+// const Img = styled.img`
+//    display: flex;
+//     margin:auto;
+// `
 
 //const  = styled.a ``
  
