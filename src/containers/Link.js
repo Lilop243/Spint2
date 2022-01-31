@@ -20,9 +20,9 @@ const Link =  () => {
   
   </Header>
   <Div className="tab-content" id="pills-tabContent">
-    <div className="tab-pane fade show active" id="Guappjolotas" role="tabpanel" aria-labelledby="pills-home-tab"><a href="./Nada"><Img src="./card...svg" alt=""/></a></div>
-    <div className="tab-pane fade" id="Bebidas" role="tabpanel" aria-labelledby="pills-profile-tab"><Img src="./bebidas.svg" alt=""/></div>
-    <div className="tab-pane fade" id="Tamales" role="tabpanel" aria-labelledby="pills-contact-tab"><Img src="./tamales.svg" alt=""/></div>
+    <div className="tab-pane fade show active" id="Guappjolotas" role="tabpanel" aria-labelledby="pills-home-tab"><a href="./Nada"><Img src="./imagenes/card...svg" alt=""/></a></div>
+    <div className="tab-pane fade" id="Bebidas" role="tabpanel" aria-labelledby="pills-profile-tab"><Img src="./imagenes/bebidas.svg" alt=""/></div>
+    <div className="tab-pane fade" id="Tamales" role="tabpanel" aria-labelledby="pills-contact-tab"><Img src="./imagenes/tamales.svg" alt=""/></div>
   </Div>
 </div>;
 };
