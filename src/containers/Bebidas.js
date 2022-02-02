@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import {Link} from 'react-router-dom'
 
 
-
-function Guajolo () {
-    const url = 'https://apiguajolotas.herokuapp.com/guapjolotas/'
+function Bebidas () {
+    const url = 'https://apiguajolotas.herokuapp.com/bebidas/'
     const [todos, setTodos] = useState()
     const fetchApi = async() => {
         const response = await fetch(url)
@@ -25,9 +23,8 @@ function Guajolo () {
           <div>
       
       
-      <Link style={{margin:'10px'}} to="/Nada" ><img src={todo.imagen} alt=""/>
-</Link>
-
+      
+          <div className="tab-pane fade show active" id="Guappjolotas" role="tabpanel" aria-labelledby="pills-home-tab"><img src={todo.imagen} alt=""/></div>
           </div>
          )
 
@@ -38,4 +35,4 @@ function Guajolo () {
    )    
 }
 
-export default Guajolo;
+export default Bebidas;
