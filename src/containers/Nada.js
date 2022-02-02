@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
+
 
 
 function Nada () {
@@ -16,7 +18,10 @@ function Nada () {
 <h3>Guajolocombo</h3>
 <p>Selecciona la bebida que mas te guste y disfruta tu desayuno </p>
 </div>
+<Link style={{margin:'10px'}} to="/Car" ><button>agregar</button></Link>
   </div>;
+
+
 
 
 };
