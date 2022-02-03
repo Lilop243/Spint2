@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 
 
 function Bebidas () {
@@ -24,7 +25,8 @@ function Bebidas () {
       
       
       
-          <div className="tab-pane fade show active" id="Guappjolotas" role="tabpanel" aria-labelledby="pills-home-tab"><img src={todo.imagen} alt=""/></div>
+      <Link style={{ margin: '10px' }} to={`//${todo.id}`} key={todo.id} ><img src={todo.imagen} alt="" />
+              </Link>
           </div>
          )
 

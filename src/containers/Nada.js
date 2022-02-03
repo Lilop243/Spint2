@@ -14,7 +14,7 @@ function Nada({ todos }) {
     <h3>${precio}</h3>
     <div>
       <p>Sabor</p>
-      <img src={imagen} alt="" />
+
     </div>
 
     <div>
