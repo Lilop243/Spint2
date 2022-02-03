@@ -16,7 +16,7 @@ const Todo = () => {
       {/* Navbar */}
       <nav className="navbar navbar-light ">
         <div className="container-fluid">
-          <a className="navbar-brand"><img src="./imagenes/logo.svg" width="80px" alt=""></img></a>
+          <a href="/"className="navbar-brand"><img src="./imagenes/logo.svg" width="80px" alt=""></img></a>
           <form className="d-flex">
             <img src="https://cdn-icons.flaticon.com/png/512/2366/premium/2366367.png?token=exp=1642868532~hmac=6dd18ca8bd0e6a91785dd9e272ecb4e8" alt="" width="40px" />
 
