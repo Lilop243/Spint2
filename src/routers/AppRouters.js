@@ -9,7 +9,7 @@ import Tamales from '../containers/Tamales';
 
 
 const AppRouters = () => {
-  const url = 'https://apiguajolotas.herokuapp.com/guapjolotas/'
+  const url = 'https://sprintdos.herokuapp.com/guapjolotas/'
   const [todos, setTodos] = useState()
   const fetchApi = async () => {
     const response = await fetch(url)

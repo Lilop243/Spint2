@@ -6,14 +6,15 @@ function Nada({ todos }) {
 
   const { id } = useParams()
   const producto = todos.find((product) => product.id === Number(id))
-  const { imagen } = producto
+  const { imagen, precio,nombre } = producto
 
   return <div>
     <img src={imagen} alt="" />
-    <h3>Guajolota de Tamal Verde</h3>
-    <h3>$25 MXN</h3>
+    <h3>{nombre}</h3>
+    <h3>${precio}</h3>
     <div>
       <p>Sabor</p>
+      <img src={imagen} alt="" />
     </div>
 
     <div>

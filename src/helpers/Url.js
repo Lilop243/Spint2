@@ -1,1 +1,1 @@
-export const url = "https://apiguajolotas.herokuapp.com/"
+export const url = "https://sprintdos.herokuapp.com/"

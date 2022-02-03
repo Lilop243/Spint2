@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 
 function Bebidas () {
-    const url = 'https://apiguajolotas.herokuapp.com/bebidas/'
+    const url = 'https://sprintdos.herokuapp.com/bebidas/'
     const [todos, setTodos] = useState()
     const fetchApi = async() => {
         const response = await fetch(url)
