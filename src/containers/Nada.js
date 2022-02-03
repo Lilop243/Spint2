@@ -1,106 +1,31 @@
-// import React, { useState, useEffect } from 'react';
-// import { Atras, Bebida, BotonAgregar, BotonesCont, Cantidad, Check, Cont, ContAdicion, Contador, ContProduct, ContSabores, Descrip, ItemBebidas, Navb, NombreBe, NombreProd, PrecioBe, PrecioProd, Product, Sabores, SegSubtitulo, Subtitulo } from '../styles/StyledSeleccion';
-
-// const Nada = () => {
-//     const productos = JSON.parse(localStorage.getItem('productCar')) || []
-//     const [cantidad, setcantidad] = useState(1);
-//     const [precio1, setprecio1] = useState(25);
-//     const [bebidas, setbebidas] = useState([]);
-//     const [bebidaSelec, setbebidaSelec] = useState([]);
-//     const [sabor, setsabor] = useState([]);
-
-//     const consultBebi = async () => {
-//         const resp = await fetch()
-//         const data = await resp.json()
-//         setbebidas(data)
-//     }
-
-//     const consultSabo = async () => {
-//         const resp = await fetch)
-//         const data = await resp.json()
-//         setsabor(data)
-//     }
-
-//     useEffect(() => {
-//         consultBebi()
-//         consultSabo()
-//     }, []);
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 
-//     const mas = () => {
-//         setcantidad(cantidad + 1)
-//         setprecio1(precio1 + 25)
-//     }
+function Nada({ todos }) {
 
-//     const menos = () => {
-//         if (cantidad > 1) {
-//             setcantidad(cantidad - 1)
-//             setprecio1(precio1 - 25)
-//         }
-//     }
+  const { id } = useParams()
+  const producto = todos.find((product) => product.id === Number(id))
+  const { imagen, precio,nombre } = producto
 
-//     const agregarcar = () => {
-//         const productoComprar = {
-//             precio1,
-//             cantidad
-//         }
+  return <div>
+    <img src={imagen} alt="" />
+    <h3>{nombre}</h3>
+    <h3>${precio}</h3>
+    <div>
+      <p>Sabor</p>
+      <img src={imagen} alt="" />
+    </div>
 
-//         productos.push(productoComprar)
-//         productos.push(bebidaSelec)
-//         localStorage.setItem('productCar', JSON.stringify(productos))
-//     }
+    <div>
+      <h3>Guajolocombo</h3>
+      <p>Selecciona la bebida que mas te guste y disfruta tu desayuno </p>
+    </div>
+  </div>;
 
-//     const bebidaSelect = (id, nombre, precio, imagen) => {
-//         setbebidaSelec({
-//             id, nombre, precio, imagen
-//         })
-//     }
 
-//     return (
-//         <Cont>
-//             <Navb>
-//                 <Atras ></Atras>
-//             </Navb>
-//             <ContProduct>
-//                 <Product src="https://res.cloudinary.com/jadergomez/image/upload/v1643558593/G-VERDE_ktkshe_fstbfk.png" alt="Prod" />
-//             </ContProduct>
-//             <center>
-//                 <NombreProd>Guajolota de Tamal Verde</NombreProd>
-//                 <PrecioProd>${precio1} MXN</PrecioProd>
-//             </center>
-//             <Contador>
-//                 <BotonesCont onClick={() => menos()}></BotonesCont>
-//                 <Cantidad>{cantidad}</Cantidad>
-//                 <BotonesCont onClick={() => mas()}></BotonesCont>
-//             </Contador>
 
-//             <Subtitulo>Sabor</Subtitulo>
-//             <ContSabores>
-//                 {
-//                     sabor.map(sab => (
-//                         <Sabores src={sab.imagen} alt={sab.nombre} key={sab.id} />
-//                     ))
-//                 }
-//             </ContSabores>
-//             <SegSubtitulo>Guajolocombo</SegSubtitulo>
-//             <Descrip>Selecciona la bebida que más te guste y disfruta de tu desayuno</Descrip>
-//             <ContAdicion>
-//                 {
-//                     bebidas.map(bebi => (
-//                         <>
-//                             <ItemBebidas key={bebi.id}>
-//                                 <Check type="checkbox" name="" id={bebi.id} onChange={() => bebidaSelect(bebi.id, bebi.nombre, bebi.precio, bebi.imagen)} />
-//                                 <Bebida src={bebi.imagen} alt={bebi.nombre} />
-//                                 <NombreBe>{bebi.nombre}</NombreBe>
-//                                 <PrecioBe>+ ${bebi.precio} MXN</PrecioBe>
-//                             </ItemBebidas>
-//                         </>
-//                     ))
-//                 }
-//                 <BotonAgregar onClick={() => agregarcar()} type="button">Ir a pagar ${precio1} + bebida</BotonAgregar>
-//             </ContAdicion>
-//         </Cont>
-//     );
-// };
 
-// export default Nada;
+};
+
+export default Nada;

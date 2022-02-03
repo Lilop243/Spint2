@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 
-function Bebidas () {
-    const url = 'https://sprintdos.herokuapp.com/bebidas/'
+function Tamales () {
+    const url = 'https://sprintdos.herokuapp.com/tamales/'
     const [todos, setTodos] = useState()
     const fetchApi = async() => {
         const response = await fetch(url)
@@ -35,4 +35,4 @@ function Bebidas () {
    )    
 }
 
-export default Bebidas;
+export default Tamales;
