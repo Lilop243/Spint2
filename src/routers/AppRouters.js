@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Bebidas from '../containers/Bebidas';
 import Guajolo from '../containers/Guajolo';
 import Nada from '../containers/Nada';
 import Tamales from '../containers/Tamales';
 import Todo from '../containers/Todo';
-import Bebidas from '../containers/Bebidas';
+import CarBebidas from '../containers/CarBebidas';
 import Car from '../containers/Car';
 
 
@@ -18,6 +19,8 @@ const AppRouters = () => {
     const response = await fetch(url)
     const responseJSON = await response.json()
     setTodos(responseJSON)
+
+    
   }
 
   useEffect(() => {
