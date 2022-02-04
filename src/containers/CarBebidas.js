@@ -5,10 +5,10 @@ import { useParams } from 'react-router-dom';
 
 
 
-function CarBebidas({ todos}) {
+function CarBebidas({ todos1}) {
 
   const { id } = useParams()
-  const producto = todos.find((product) => product.id === Number(id))
+  const producto = todos1.find((product) => product.id === Number(id))
   const { imagen, precio,nombre } = producto
 
   return <div>

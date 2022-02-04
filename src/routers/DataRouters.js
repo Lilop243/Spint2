@@ -7,11 +7,11 @@ import CarBebidas from '../containers/CarBebidas';
 
 const DataRouters = () => {
     const url = 'https://sprintdos.herokuapp.com/bebidas/'
-    const [todos, setTodos] = useState()
+    const [todos1, setTodos1] = useState()
     const fetchApi = async () => {
       const response = await fetch(url)
       const responseJSON = await response.json()
-      setTodos(responseJSON)
+      setTodos1(responseJSON)
     }
   
     useEffect(() => {
@@ -23,8 +23,8 @@ const DataRouters = () => {
   return (
     <BrowserRouter>
     <Routes>
-        <Route path="/CarBebidas/:id" element={<CarBebidas todos={todos} />}/>
-        <Route path="/Bebidas" element={<Bebidas todos={todos} />} />
+        <Route path="/CarBebidas/:id" element={<CarBebidas todos1={todos1} />}/>
+        <Route path="/Bebidas" element={<Bebidas todos1={todos1} />} />
     </Routes>
 </BrowserRouter>
   )

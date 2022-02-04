@@ -8,6 +8,7 @@ ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
     <AppRouters/>
+    <DataRouters/>
   </React.StrictMode>,
   document.getElementById('root')
 );
