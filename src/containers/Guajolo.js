@@ -24,7 +24,7 @@ function Guajolo() {
             <div>
 
 
-              <Link style={{ margin: '10px' }} to={`/Nada/${todo.id}`} key={todo.id} ><img src={todo.imagen} alt="" />
+              <Link style={{ margin: '10px' }} to={`/Nada/${todo.id}/guajolotas`} key={todo.id} ><img src={todo.imagen} alt="" />
               </Link>
 
             </div>

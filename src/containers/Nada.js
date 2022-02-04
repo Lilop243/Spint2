@@ -1,16 +1,31 @@
 
 import { ButtonAgregar, BebidasA, DivB, DivS, H2S,H5, Imgsa, H3, ImgCard } from '../styles/NadaStyles'
 import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 
 
 
-function Nada({ todos }) {
+function Nada() {
 
-  const { id } = useParams()
+  const [todos, setTodos] = useState()
+  const { id, categoria } = useParams()
   const producto = todos.find((product) => product.id === Number(id))
   const { imagen, precio,nombre } = producto
+  const url = 'https://sprintdos.herokuapp.com/'
+  
+  const fetchApi = async () => {
+    const response = await fetch(url + categoria)
+    const responseJSON = await response.json()
+    setTodos(responseJSON)
 
+  }
+
+  useEffect(() => {
+    console.log(categoria)
+   // fetchApi()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return <div>
     <ImgCard src={imagen} alt="" />
