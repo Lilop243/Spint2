@@ -5,6 +5,9 @@ import Guajolo from '../containers/Guajolo';
 import Nada from '../containers/Nada';
 import Tamales from '../containers/Tamales';
 import Todo from '../containers/Todo';
+import Bebidas from '../containers/Bebidas';
+import Car from '../containers/Car';
+
 
 
 const AppRouters = () => {
@@ -31,7 +34,10 @@ const AppRouters = () => {
         <Route path="/" element={<App />} />
         <Route path="/Nada/:id" element={<Nada todos={todos} />} />
         <Route path="/Guajolo" element={<Guajolo todos={todos} />} />
+        <Route path="/Bebidas" element={<Bebidas />} />
         <Route path="/Tamales" element={<Tamales />} />
+        <Route path="/" element={<Nada />} />
+        <Route path="/Car" element={<Car />} />
 
       </Routes>
     </BrowserRouter>
