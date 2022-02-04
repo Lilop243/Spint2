@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Bebidas from '../containers/Bebidas';
 import Guajolo from '../containers/Guajolo';
 import Nada from '../containers/Nada';
 import Tamales from '../containers/Tamales';
 import Todo from '../containers/Todo';
-import Bebidas from '../containers/Bebidas';
-import Car from '../containers/Car';
+import CarBebidas from '../containers/CarBebidas';
 
 
 
@@ -16,6 +16,8 @@ const AppRouters = () => {
     const response = await fetch(url)
     const responseJSON = await response.json()
     setTodos(responseJSON)
+
+    
   }
 
   useEffect(() => {
@@ -32,10 +34,11 @@ const AppRouters = () => {
       <Routes>
         <Route path="/Nada/:id" element={<Nada todos={todos} />} />
         <Route path="/Guajolo" element={<Guajolo todos={todos} />} />
-        <Route path="/Bebidas" element={<Bebidas />} />
         <Route path="/Tamales" element={<Tamales />} />
-        <Route path="/" element={<Nada />} />
-        <Route path="/Car" element={<Car />} />
+        <Route path="/Bebidas" element={<Bebidas  />} />
+        <Route path="/CarBebidas/:id" element={<CarBebidas />}/>
+
+
 
       </Routes>
     </BrowserRouter>

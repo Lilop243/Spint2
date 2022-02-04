@@ -25,6 +25,7 @@ const DataRouters = () => {
     <Routes>
         <Route path="/CarBebidas/:id" element={<CarBebidas todos1={todos1} />}/>
         <Route path="/Bebidas" element={<Bebidas todos1={todos1} />} />
+        
     </Routes>
 </BrowserRouter>
   )
