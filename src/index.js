@@ -6,7 +6,7 @@ import AppRouters from './routers/AppRouters';
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-<AppRouters/>
+    <AppRouters/>
   </React.StrictMode>,
   document.getElementById('root')
 );

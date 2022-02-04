@@ -52,6 +52,6 @@ font-size:1 em;
 export const ImgCard = styled.img
 `
 margin-top:30px;
-margin-left:35em;
+margin-left:25%;
 width:600px;
 `

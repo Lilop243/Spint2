@@ -19,19 +19,7 @@ const Links =  () => {
     </ul>
   
   </Header>
-  <div className="tab-content" id="pills-tabContent">
-    <div className="tab-pane fade show active" id="Guappjolotas" role="tabpanel" aria-labelledby="pills-home-tab">
-
-
-    </div>
-    <div className="tab-pane fade" id="Bebidas" role="tabpanel" aria-labelledby="pills-profile-tab"><Img src="./bebidas.svg" alt=""/>
-
-    </div>
-    <div className="tab-pane fade" id="Tamales" role="tabpanel" aria-labelledby="pills-contact-tab"><Img src="./tamales.svg" alt=""/>
-   
-    </div>
   </div>
-</div>;
 };
 
 
@@ -44,12 +32,7 @@ display:flex;
 
 
 
-const Img = styled.img`
-   display: flex;
-    margin:auto;
 
-
-`
 
 
 export default Links;

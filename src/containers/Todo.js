@@ -4,6 +4,8 @@ import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
+
 
 const Todo = () => {
 
@@ -38,7 +40,22 @@ const Todo = () => {
 
       {/* Productos  */}
 
+      <Header className=" ">
+    <ul className="nav nav-pills nav-fill">
+   
+  <Li className="nav-item" role="presentation">
+  <Link style={{margin:'10px' }} to="/Guajolo" > Guajolotas </Link>
+  </Li>
+  <Li className="nav-item" role="presentation">
+  <Link style={{margin:'10px'}} to="/Bebidas" > Bebidas </Link>
+  </Li> 
+  <Li className="nav-item" role="presentation">
+  <Link style={{margin:'10px'}} to="/tamales" > Tamales </Link>
+  </Li>
 
+    </ul>
+  
+  </Header>
     </div>
   )
 };
@@ -69,6 +86,18 @@ width: 100%;
 outline: none;
   border: 0;
 `
+const Header = styled.div`
+margin-top:52px;
+justify-content:center;
+display:flex;
+`
+const Li = styled.li
+`
+padding-left:35px;
+
+`
+
+
 
 // const Img = styled.img`
 //    display: flex;
