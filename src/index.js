@@ -7,8 +7,7 @@ import DataRouters from './routers/DataRouters';
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-<AppRouters/>
-<DataRouters/>
+    <AppRouters/>
   </React.StrictMode>,
   document.getElementById('root')
 );

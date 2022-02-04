@@ -4,10 +4,10 @@ import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
+
 
 const Todo = () => {
-
-
 
   return (
 
@@ -16,9 +16,9 @@ const Todo = () => {
       {/* Navbar */}
       <nav className="navbar navbar-light ">
         <div className="container-fluid">
-          <a className="navbar-brand"><img src="./imagenes/logo.svg" width="80px" alt=""></img></a>
+          <a href="/"className="navbar-brand"><img src="./imagenes/logo.svg" width="80px" alt=""></img></a>
           <form className="d-flex">
-            <img src="https://cdn-icons.flaticon.com/png/512/2366/premium/2366367.png?token=exp=1642868532~hmac=6dd18ca8bd0e6a91785dd9e272ecb4e8" alt="" width="40px" />
+            <a href="/car"><img src="https://res.cloudinary.com/do2ijjhfn/image/upload/v1643926199/Group_66_ck35yk.png" alt="" width="40px" /></a>
 
           </form>
         </div>
@@ -40,7 +40,22 @@ const Todo = () => {
 
       {/* Productos  */}
 
+      <Header className=" ">
+    <ul className="nav nav-pills nav-fill">
+   
+  <Li className="nav-item" role="presentation">
+  <Link style={{margin:'10px' }} to="/Guajolo" > Guajolotas </Link>
+  </Li>
+  <Li className="nav-item" role="presentation">
+  <Link style={{margin:'10px'}} to="/Bebidas" > Bebidas </Link>
+  </Li> 
+  <Li className="nav-item" role="presentation">
+  <Link style={{margin:'10px'}} to="/tamales" > Tamales </Link>
+  </Li>
 
+    </ul>
+  
+  </Header>
     </div>
   )
 };
@@ -71,6 +86,18 @@ width: 100%;
 outline: none;
   border: 0;
 `
+const Header = styled.div`
+margin-top:52px;
+justify-content:center;
+display:flex;
+`
+const Li = styled.li
+`
+padding-left:35px;
+
+`
+
+
 
 // const Img = styled.img`
 //    display: flex;
