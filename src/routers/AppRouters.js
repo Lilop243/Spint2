@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import App from '../App';
 import Guajolo from '../containers/Guajolo';
 import Nada from '../containers/Nada';
 import Tamales from '../containers/Tamales';
@@ -31,7 +30,6 @@ const AppRouters = () => {
     <BrowserRouter>
     <Todo />
       <Routes>
-        <Route path="/" element={<App />} />
         <Route path="/Nada/:id" element={<Nada todos={todos} />} />
         <Route path="/Guajolo" element={<Guajolo todos={todos} />} />
         <Route path="/Bebidas" element={<Bebidas />} />

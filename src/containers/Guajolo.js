@@ -17,7 +17,7 @@ function Guajolo() {
   }, [])
   return (
     <div>
-      {!todos ? 'cargando...' :
+      {!todos ? 'cargando...' : 
         todos.map((todo, index) => {
           return (
 
