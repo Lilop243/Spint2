@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import { ButtonBuy, H2, Img } from '../styles/CarStyle';
+import { ButtonBuy,H2, Img } from '../styles/CarStyle';
 
 
 function Car () {

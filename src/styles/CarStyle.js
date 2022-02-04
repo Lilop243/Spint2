@@ -12,14 +12,11 @@ background: #FA4A0C;
 opacity: 0.5;
 border-radius: 40px;
 margin-left:43%;
-@media (max-width: 320px) {
-    display: none;
-  }
-
 
 `
 export const H2 = styled.h2
 `
+padding-top:10%;
 text-align: center;
 
 `
@@ -34,4 +31,9 @@ padding-bottom:100px;
 @media (max-width: 320px) {
     display: none;
   }
+`
+
+export const Formulario = styled.form
+`
+margin:30px;
 `
