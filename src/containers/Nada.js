@@ -13,7 +13,11 @@ import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import React from "react";
-
+  useEffect(() => {
+    console.log(categoria)
+   // fetchApi()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
 
 

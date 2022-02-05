@@ -16,7 +16,7 @@ margin-left:43%;
 `
 export const H2 = styled.h2
 `
-padding-top:10%;
+padding-top:5%;
 text-align: center;
 
 
@@ -27,8 +27,8 @@ export const Img = styled.img
 text-align:center
 width:300px;
 padding-left:45%;
-padding-top:10%;
-padding-bottom:100px;
+padding-top:5%;
+padding-bottom:50px;
 @media (max-width: 320px) {
     display: none;
   }
