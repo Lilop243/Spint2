@@ -1,5 +1,5 @@
 
-import { BebidasA, DivB, DivS, H2S,H5, Imgsa, H3, ImgCard } from '../styles/NadaStyles'
+import { BebidasA, DivB, DivS, H2S,H5, Imgsa, H3, ImgCard, ButtonAgregar } from '../styles/NadaStyles'
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -90,7 +90,7 @@ const Nada =() =>{
     </div>
 
     <div class="buttom">
-  <button class="btn"> Añadir al carrito</button>
+  <ButtonAgregar class="btn"> Añadir al carrito</ButtonAgregar>
 </div>  
 </div>;
 

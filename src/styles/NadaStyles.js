@@ -6,7 +6,7 @@ background: #FA4A0C;
 padding: 14px;
 border-radius:20px;
 padding-left: 5%;
-padding-right: 5%s;
+padding-right: 5%;
 color: white;
 border-radius: 40px;
 margin-left:43%;
