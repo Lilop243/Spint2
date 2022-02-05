@@ -6,32 +6,10 @@ import { useEffect, useState } from 'react';
 
 
 
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import Badge from "@material-ui/core/Badge";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import Button from "@material-ui/core/Button";
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
-import React from "react";
-  useEffect(() => {
-    console.log(categoria)
-   // fetchApi()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-
-
-
-
-
-
-
-
 const Nada =() =>{
 
   const [todos, setTodos] = useState([])
   const [producto, setProducto] = useState({});
-  const [itemCount, setItemCount] = React.useState(1);
 
   //recibimos id y categoria por la url
   const { id, categoria } = useParams()
@@ -62,60 +40,12 @@ const Nada =() =>{
     console.log(producto);
     
   }, [filtro, id, producto, todos]);
-
   
   return <div>
       
       <ImgCard src={producto?.imagen} alt={producto?.name} />
       <H3>{producto?.nombre}</H3>
       <H3>{producto?.precio}</H3>
-
-
-
-
-      <div>
-        <Badge color="secondary" badgeContent={itemCount}>
-          <ShoppingCartIcon />{" "}
-        </Badge>
-        <ButtonGroup>
-          <Button
-            onClick={() => {
-              setItemCount(Math.max(itemCount - 1, 0));
-            }}
-          >
-            {" "}
-            <RemoveIcon fontSize="small" />
-          </Button>
-          <Button
-            onClick={() => {
-              setItemCount(itemCount + 1);
-            }}
-          >
-            {" "}
-            <AddIcon fontSize="small" />
-          </Button>
-        </ButtonGroup>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     <DivS>
       <H2S>Sabores</H2S>
@@ -156,8 +86,7 @@ const Nada =() =>{
         </DivB>
     </div>
 
-   <ButtonAgregar>Agregar al Carrito</ButtonAgregar>
-    
+    <ButtonAgregar >Agregar al Carrito</ButtonAgregar>
   </div>;
 
 
