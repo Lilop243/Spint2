@@ -5,11 +5,12 @@ export const ButtonAgregar= styled.button
 background: #FA4A0C;
 padding: 14px;
 border-radius:20px;
-padding-left: 100px;
-padding-right: 100px;
+padding-left: 5%;
+padding-right: 5%s;
 color: white;
 border-radius: 40px;
 margin-left:43%;
+
 
 `
 export const BebidasA = styled.img
@@ -53,5 +54,5 @@ export const ImgCard = styled.img
 `
 margin-top:30px;
 margin-left:25%;
-width:600px;
+
 `
