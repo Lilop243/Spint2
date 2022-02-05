@@ -1,21 +1,117 @@
 
 import { ButtonAgregar, BebidasA, DivB, DivS, H2S,H5, Imgsa, H3, ImgCard } from '../styles/NadaStyles'
 import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 
 
 
-function Nada({ todos }) {
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+import Badge from "@material-ui/core/Badge";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import Button from "@material-ui/core/Button";
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
+import React from "react";
 
-  const { id } = useParams()
-  const producto = todos.find((product) => product.id === Number(id))
-  const { imagen, precio,nombre } = producto
 
 
+
+
+
+
+
+
+
+const Nada =() =>{
+
+  const [todos, setTodos] = useState([])
+  const [producto, setProducto] = useState({});
+  const [itemCount, setItemCount] = React.useState(1);
+
+  //recibimos id y categoria por la url
+  const { id, categoria } = useParams()
+  const url = 'https://sprintdos.herokuapp.com/'
+  
+  const fetchApi = async (  ) => {
+    const response = await fetch(url + categoria)
+    const responseJSON = await response.json()
+    return responseJSON
+  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const filtro = ( id ) => {
+    setProducto(todos?.find( Element => Element.id === Number(id)))
+    
+  }
+  //montamos el comoponente y hacemos la peticion segun la cateoria que recibimos en la url
+  useEffect(() => {
+    console.log("montado")
+    fetchApi(url+categoria).then(resp => setTodos(resp))
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  
+  //montamos de nuevo el componente para poder usar el estado actualizado de la peticion fetch
+  useEffect(() => {
+    console.log("montado2")
+    filtro(id);
+    console.log(producto);
+    
+  }, [filtro, id, producto, todos]);
+
+  
   return <div>
-    <ImgCard src={imagen} alt="" />
-    <H3>{nombre}</H3>
-    <H3>${precio}</H3>
+      
+      <ImgCard src={producto?.imagen} alt={producto?.name} />
+      <H3>{producto?.nombre}</H3>
+      <H3>{producto?.precio}</H3>
+
+
+
+
+      <div>
+        <Badge color="secondary" badgeContent={itemCount}>
+          <ShoppingCartIcon />{" "}
+        </Badge>
+        <ButtonGroup>
+          <Button
+            onClick={() => {
+              setItemCount(Math.max(itemCount - 1, 0));
+            }}
+          >
+            {" "}
+            <RemoveIcon fontSize="small" />
+          </Button>
+          <Button
+            onClick={() => {
+              setItemCount(itemCount + 1);
+            }}
+          >
+            {" "}
+            <AddIcon fontSize="small" />
+          </Button>
+        </ButtonGroup>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     <DivS>
       <H2S>Sabores</H2S>
@@ -56,7 +152,8 @@ function Nada({ todos }) {
         </DivB>
     </div>
 
-    <ButtonAgregar >Agregar al Carrito</ButtonAgregar>
+   <ButtonAgregar>Agregar al Carrito</ButtonAgregar>
+    
   </div>;
 
 

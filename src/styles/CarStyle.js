@@ -19,6 +19,7 @@ export const H2 = styled.h2
 padding-top:10%;
 text-align: center;
 
+
 `
 
 export const Img = styled.img
@@ -36,4 +37,10 @@ padding-bottom:100px;
 export const Formulario = styled.form
 `
 margin:30px;
+`
+
+export const Span = styled.h6`
+color: #FA4A0C;
+margin-top: 150px;
+
 `
