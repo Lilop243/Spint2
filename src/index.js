@@ -9,6 +9,7 @@ ReactDOM.render(
     <GlobalStyle />
     <AppRouters/>
 
+
   </React.StrictMode>,
   document.getElementById('root')
 );

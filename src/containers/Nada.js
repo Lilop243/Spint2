@@ -6,31 +6,46 @@ import { useEffect, useState } from 'react';
 
 
 
-function Nada() {
+const Nada =() =>{
 
-  const [todos, setTodos] = useState()
+  const [todos, setTodos] = useState([])
+  const [producto, setProducto] = useState({});
+
+  //recibimos id y categoria por la url
   const { id, categoria } = useParams()
-  const producto = todos.find((product) => product.id === Number(id))
-  const { imagen, precio,nombre } = producto
   const url = 'https://sprintdos.herokuapp.com/'
   
-  const fetchApi = async () => {
+  const fetchApi = async (  ) => {
     const response = await fetch(url + categoria)
     const responseJSON = await response.json()
-    setTodos(responseJSON)
-
+    return responseJSON
   }
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const filtro = ( id ) => {
+    setProducto(todos?.find( Element => Element.id === Number(id)))
+    
+  }
+  //montamos el comoponente y hacemos la peticion segun la cateoria que recibimos en la url
   useEffect(() => {
-    console.log(categoria)
-   // fetchApi()
+    console.log("montado")
+    fetchApi(url+categoria).then(resp => setTodos(resp))
+    
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
+  
+  //montamos de nuevo el componente para poder usar el estado actualizado de la peticion fetch
+  useEffect(() => {
+    console.log("montado2")
+    filtro(id);
+    console.log(producto);
+    
+  }, [filtro, id, producto, todos]);
+  
   return <div>
-    <ImgCard src={imagen} alt="" />
-    <H3>{nombre}</H3>
-    <H3>${precio}</H3>
+      
+      <ImgCard src={producto?.imagen} alt={producto?.name} />
+      <H3>{producto?.nombre}</H3>
+      <H3>{producto?.precio}</H3>
     
     <DivS>
       <H2S>Sabores</H2S>

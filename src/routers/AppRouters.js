@@ -1,28 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Bebidas from '../containers/Bebidas';
 import Guajolo from '../containers/Guajolo';
 import Nada from '../containers/Nada';
 import Tamales from '../containers/Tamales';
 import Todo from '../containers/Todo';
-import CarBebidas from '../containers/CarBebidas';
 import Car from '../containers/Car';
 
-
-
-
-
 const AppRouters = () => {
+  //const [category, setCategory] = useState("");
   /*const url = 'https://sprintdos.herokuapp.com/guapjolotas/'
   //const [todos, setTodos] = useState()
   const fetchApi = async () => {
     const response = await fetch(url)
     const responseJSON = await response.json()
     setTodos(responseJSON)
-
+​
     
   }
-
+​
   useEffect(() => {
     fetchApi()
   }, [])*/
@@ -31,17 +27,20 @@ const AppRouters = () => {
     <BrowserRouter>
     <Todo />
       <Routes>
-        <Route path="/Nada/:id/:categoria" element={<Nada/>} />
+        <Route path={`/Nada/:id/:categoria`} element={<Nada/>} />
         <Route path="/Guajolo" element={<Guajolo />} />
-        <Route path="/Bebidas" element={<Bebidas />} />
+        <Route path="/Bebidas" element={<Bebidas  />} />
         <Route path="/Tamales" element={<Tamales />} />
         <Route path="/Car" element={<Car />} />
+<<<<<<< HEAD
         <Route path="/" element={<Guajolo />} />
+=======
+        <Route path='/' element={<Guajolo/>}/>
+>>>>>>> 19371625623fd35dd45fc76da0b26f93204d446f
         
       </Routes>
     </BrowserRouter>
   )
 };
-
 
 export default AppRouters;

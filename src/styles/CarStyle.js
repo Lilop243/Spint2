@@ -38,3 +38,9 @@ export const Formulario = styled.form
 `
 margin:30px;
 `
+
+export const Span = styled.h6`
+color: #FA4A0C;
+margin-top: 150px;
+
+`

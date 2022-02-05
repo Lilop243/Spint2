@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
+
 
 
 function Tamales () {
@@ -22,9 +24,10 @@ function Tamales () {
 
           <div>
       
+      <Link style={{ margin: '10px' }} to={`/Nada/${todo.id}/tamales`} key={todo.id} ><img src={todo.imagen} alt="" />
+              </Link>
+
       
-      
-          <div className="tab-pane fade show active" id="Guappjolotas" role="tabpanel" aria-labelledby="pills-home-tab"><img src={todo.imagen} alt=""/></div>
           </div>
          )
 
