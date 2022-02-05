@@ -1,5 +1,5 @@
 
-import { ButtonAgregar, BebidasA, DivB, DivS, H2S,H5, Imgsa, H3, ImgCard } from '../styles/NadaStyles'
+import { BebidasA, DivB, DivS, H2S,H5, Imgsa, H3, ImgCard } from '../styles/NadaStyles'
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
