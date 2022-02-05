@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+
+import { BrowserRouter,Route, Routes } from "react-router-dom";
 import Bebidas from '../containers/Bebidas';
 import Guajolo from '../containers/Guajolo';
 import Nada from '../containers/Nada';
@@ -31,12 +31,8 @@ const AppRouters = () => {
         <Route path="/Guajolo" element={<Guajolo />} />
         <Route path="/Bebidas" element={<Bebidas  />} />
         <Route path="/Tamales" element={<Tamales />} />
-        <Route path="/Car" element={<Car />} />
-<<<<<<< HEAD
-        <Route path="/" element={<Guajolo />} />
-=======
-        <Route path='/' element={<Guajolo/>}/>
->>>>>>> 19371625623fd35dd45fc76da0b26f93204d446f
+        <Route path="/Car" element={<Car />}/>
+        
         
       </Routes>
     </BrowserRouter>
