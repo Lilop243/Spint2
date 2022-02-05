@@ -10,11 +10,14 @@ const Nada =() =>{
 
   const [todos, setTodos] = useState([])
   const [producto, setProducto] = useState({});
+  
 
   //recibimos id y categoria por la url
   const { id, categoria } = useParams()
   const url = 'https://sprintdos.herokuapp.com/'
   
+
+
   const fetchApi = async (  ) => {
     const response = await fetch(url + categoria)
     const responseJSON = await response.json()
@@ -45,7 +48,7 @@ const Nada =() =>{
       
       <ImgCard src={producto?.imagen} alt={producto?.name} />
       <H3>{producto?.nombre}</H3>
-      <H3>{producto?.precio}</H3>
+      <H3>${producto?.precio}</H3>
     
     <DivS>
       <H2S>Sabores</H2S>
@@ -86,8 +89,10 @@ const Nada =() =>{
         </DivB>
     </div>
 
-    <ButtonAgregar >Agregar al Carrito</ButtonAgregar>
-  </div>;
+    <div class="buttom">
+  <button class="btn"> Añadir al carrito</button>
+</div>  
+</div>;
 
 
 
