@@ -13,7 +13,7 @@ function Car() {
       {
         productoLS.map((produc, index) => (
           <div key={index}>
-            <img src={produc.imagen} />
+            <img src={produc.imagen} alt={produc.nombre} />
             <h4>{produc.nombre}</h4>
             <h4>{produc.precio}</h4>
           </div>
