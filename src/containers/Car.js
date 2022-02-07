@@ -1,14 +1,20 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
-import { ButtonBuy, H2, Img } from '../styles/CarStyle';
+import { ButtonBuy } from '../styles/CarStyle';
+
 
 
 function Car() {
 
   const productoLS = JSON.parse(localStorage.getItem('car')) || []
 
+  const pagar = () => {
+    localStorage.removeItem('car')
+    window.location.href = "/"
+}
+    
   return (
     <div>
+                <h1>Carrito</h1>
 
       {
         productoLS.map((produc, index) => (
@@ -19,11 +25,8 @@ function Car() {
           </div>
         ))
       }
-      <Form action="">
-        <H2 >Carrito</H2>
-        <Img src="https://res.cloudinary.com/do2ijjhfn/image/upload/v1643928177/Frame_20_ogi3zf.png"></Img>
-        <ButtonBuy>Pagar</ButtonBuy>
-      </Form>
+<a href="Guajolo"><ButtonBuy onClick={() => pagar()}>Pagar</ButtonBuy></a>
+             
 
     </div>);
 };

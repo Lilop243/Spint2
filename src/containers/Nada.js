@@ -52,6 +52,8 @@ const Nada = () => {
     localStorage.setItem('car', JSON.stringify(productoLS))
   }
 
+  
+
   return <div>
 
     <ImgCard src={producto?.imagen} alt={producto?.name} />
